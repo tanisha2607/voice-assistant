@@ -1,7 +1,7 @@
 from listener import listen
+from speaker import speak
 
 command = listen()
 
 if command:
-    print("Received:", command)
-    
+    speak(f"You said {command}")

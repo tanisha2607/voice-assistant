@@ -2,7 +2,7 @@ import sounddevice as sd
 import soundfile as sf
 import speech_recognition as sr
 
-SAMPLE_RATE = 16000
+SAMPLE_RATE = 16000       #frames per sec
 DURATION = 3
 
 def listen():
@@ -20,7 +20,7 @@ def listen():
 
     recognizer = sr.Recognizer()
 
-    with sr.AudioFile("input.wav") as source:
+    with sr.AudioFile("input.wav") as source:       #open audio file
         audio_data = recognizer.record(source)
 
     try:
